@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Holm - Programmer, Designer, Nature Enthusiast</title>
+    <meta name="description" content="Alexander Holm is a Danish student and aspiring programmer, designer, and nature enthusiast. Explore his education, projects, and personal interests.">
+    <meta name="keywords" content="Alexander Holm, programmer, designer, nature enthusiast, Danish student, IT specialist, FiveM, GTA, programming, web design, server administration">
+    <meta name="author" content="Alexander Holm">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.footer {
+    z-index: -10;
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            color: #333;
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            color: #fff;
+            z-index: 1;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .language-select {
+            display: flex;
+            align-items: center;
+        }
+        .language-select select {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        header {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            color: #fff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1em;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .interests {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .interests h2 {
+            color: #333;
+        }
+        .interests ul {
+            list-style: none;
+            padding: 0;
+        }
+        .interests li {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+        .personal-details {
+            background: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .personal-details h2 {
+            color: #333;
+        }
+        .personal-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .personal-details li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video class="video-background" autoplay loop muted>
+        <source src="https://www.example.com/path/to/your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Alexander Holm</a>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#interests">Interests</a>
+            <a href="#personal-details">Personal Details</a>
+        </div>
+        <div class="language-select">
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="da">Dansk</option>
+            </select>
+        </div>
+    </div>
+    <header>
+        <h1 id="header-title">Alexander Holm</h1>
+        <p id="header-description">Programmer, Designer, and Nature Enthusiast</p>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2 id="about-title">About Me</h2>
+            <p id="about-content">Alexander Holm (born [Birthdate], 2008) is a Danish student and aspiring programmer, designer, and nature enthusiast. Known for his passion for technology and the natural world, Holm has demonstrated a keen interest in building, dismantling, and understanding complex systems from a young age. Diagnosed with ADHD during his early school years, he has worked tirelessly to channel his energy and focus into his academic and personal projects.</p>
+            <p id="about-education">Holm began his formal education at Gladsaxe Skole, where his enthusiasm for learning was first recognized. Despite facing challenges due to his ADHD diagnosis in 5th or 6th grade, he remained determined to succeed academically. In 8th grade, Holm transferred to Bagsværd Kostskole, where he continued to develop his skills and interests, particularly in programming and design. He completed his 9th grade there, marking a significant milestone in his educational journey.</p>
+            <p id="about-future">In 2024, Holm will be starting his studies at Ballerup TEC, specializing in programming and IT. His focus areas include server administration, network technology, and software development, reflecting his long-term ambition to work in the field of information technology.</p>
+        </section>
+        <section id="education">
+            <h2 id="education-title">Education</h2>
+            <p id="education-content">Alexander Holm began his education at Gladsaxe Skole and later moved to Bagsværd Kostskole in 8th grade. He completed his 9th grade there and will soon begin his studies at Ballerup TEC, where he will specialize in programming and IT. This phase of his education is geared towards developing a deep understanding of server administration, network technology, and software development, setting the stage for a career in information technology.</p>
+        </section>
+        <section id="projects">
+            <h2 id="projects-title">Projects</h2>
+            <p id="projects-content">Throughout his teenage years, Alexander Holm has actively participated in various projects, particularly within the GTA community through the FiveM modification. Holm has played a significant role in managing gaming communities, programming server-side scripts, and developing related websites. His contributions have been crucial in establishing and maintaining gaming servers, ensuring a smooth and engaging user experience.</p>
+            <p id="projects-website">Holm's personal website, <a href="http://alexander-holm.com">alexander-holm.com</a>, showcases his work and serves as a platform for sharing his projects and ideas. This website highlights his technical skills and provides insight into his professional journey.</p>
+        </section>
+        <section id="interests" class="interests">
+            <h2 id="interests-title">Personal Interests</h2>
+            <ul id="interests-list">
+                <li>Entrepreneurship</li>
+                <li>Fishing</li>
+                <li>Wine</li>
+                <li>Classical Music</li>
+            </ul>
+            <p id="interests-description">In addition to his technical pursuits, Alexander Holm has a profound love for nature. He enjoys hiking, exploring natural landscapes, and engaging in creative design projects. Holm is committed to personal growth and academic improvement, balancing his technical ambitions with his passion for the natural world.</p>
+        </section>
+        <section id="personal-details" class="personal-details">
+            <h2>Personal Details</h2>
+            <ul>
+                <li><strong>Height:</strong> 180 cm</li>
+                <li><strong>Age:</strong> 15 (Turning 16 on [Date])</li>
+                <li><strong>Favorite Color:</strong> Blue</li>
+                <li><strong>Hobbies:</strong> Programming, Nature Exploration, Fishing, and Wine Tasting</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2021 Alexander Holm Mortensen | All Rights Reserved</p>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+      
+<script>
+        const languageSelector = document.getElementById('language-selector');
+
+        const translations = {
+            en: {
+                headerTitle: 'Alexander Holm',
+                headerDescription: 'Programmer, Designer, and Nature Enthusiast',
+                aboutTitle: 'About Me',
+                aboutContent: 'Alexander Holm (born [Birthdate], 2008) is a Danish student and aspiring programmer, designer, and nature enthusiast. Known for his passion for technology and the natural world, Holm has demonstrated a keen interest in building, dismantling, and understanding complex systems from a young age. Diagnosed with ADHD during his early school years, he has worked tirelessly to channel his energy and focus into his academic and personal projects.',
+                aboutEducation: 'Holm began his formal education at Gladsaxe Skole, where his enthusiasm for learning was first recognized. Despite facing challenges due to his ADHD diagnosis in 5th or 6th grade, he remained determined to succeed academically. In 8th grade, Holm transferred to Bagsværd Kostskole, where he continued to develop his skills and interests, particularly in programming and design. He completed his 9th grade there, marking a significant milestone in his educational journey.',
+                aboutFuture: 'In 2024, Holm will be starting his studies at Ballerup TEC, specializing in programming and IT. His focus areas include server administration, network technology, and software development, reflecting his long-term ambition to work in the field of information technology.',
+                educationTitle: 'Education',
+                educationContent: 'Alexander Holm began his education at Gladsaxe Skole and later moved to Bagsværd Kostskole in 8th grade. He completed his 9th grade there and will soon begin his studies at Ballerup TEC, where he will specialize in programming and IT. This phase of his education is geared towards developing a deep understanding of server administration, network technology, and software development, setting the stage for a career in information technology.',
+                projectsTitle: 'Projects',
+                projectsContent: 'Throughout his teenage years, Alexander Holm has actively participated in various projects, particularly within the GTA community through the FiveM modification. Holm has played a significant role in managing gaming communities, programming server-side scripts, and developing related websites. His contributions have been crucial in establishing and maintaining gaming servers, ensuring a smooth and engaging user experience.',
+                projectsWebsite: 'Holm\'s personal website, <a href="http://alexander-holm.com">alexander-holm.com</a>, showcases his work and serves as a platform for sharing his projects and ideas. This website highlights his technical skills and provides insight into his professional journey.',
+                interestsTitle: 'Personal Interests',
+                interestsList: [
+                    'Entrepreneurship',
+                    'Fishing',
+                    'Wine',
+                    'Classical Music'
+                ],
+                interestsDescription: 'In addition to his technical pursuits, Alexander Holm has a profound love for nature. He enjoys hiking, exploring natural landscapes, and engaging in creative design projects. Holm is committed to personal growth and academic improvement, balancing his technical ambitions with his passion for the natural world.'
+            },
+            da: {
+                headerTitle: 'Alexander Holm',
+                headerDescription: 'Programmer, Designer og Naturentusiast',
+                aboutTitle: 'Om Mig',
+                aboutContent: 'Alexander Holm (født [Fødselsdato], 2008) er en dansk studerende og kommende programmør, designer og naturentusiast. Kendt for sin passion for teknologi og den naturlige verden, har Holm vist en stor interesse for at bygge, skille ad og forstå komplekse systemer fra en ung alder. Diagnostiseret med ADHD i de tidlige skoleår har han arbejdet hårdt for at kanalisere sin energi og fokus ind i sine akademiske og personlige projekter.',
+                aboutEducation: 'Holm begyndte sin formelle uddannelse på Gladsaxe Skole, hvor hans entusiasme for læring først blev anerkendt. På trods af udfordringerne på grund af hans ADHD-diagnose i 5. eller 6. klasse, forblev han besluttet på at lykkes akademisk. I 8. klasse overgik Holm til Bagsværd Kostskole, hvor han fortsatte med at udvikle sine færdigheder og interesser, især inden for programmering og design. Han afsluttede 9. klasse der og markerede en vigtig milepæl i sin uddannelsesmæssige rejse.',
+                aboutFuture: 'I 2024 vil Holm begynde sine studier på Ballerup TEC med speciale i programmering og IT. Hans fokusområder omfatter serveradministration, netværksteknologi og softwareudvikling, hvilket afspejler hans langsigtede ambition om at arbejde inden for informationsteknologi.',
+                educationTitle: 'Uddannelse',
+                educationContent: 'Alexander Holm begyndte sin uddannelse på Gladsaxe Skole og flyttede senere til Bagsværd Kostskole i 8. klasse. Han afsluttede 9. klasse der og vil snart begynde sine studier på Ballerup TEC, hvor han vil specialisere sig i programmering og IT. Denne fase af hans uddannelse er rettet mod at udvikle en dyb forståelse af serveradministration, netværksteknologi og softwareudvikling, hvilket lægger grunden til en karriere inden for informationsteknologi.',
+                projectsTitle: 'Projekter',
+                projectsContent: 'Gennem sine teenageår har Alexander Holm aktivt deltaget i forskellige projekter, især inden for GTA-fællesskabet gennem FiveM-modifikationen. Holm har spillet en vigtig rolle i at administrere gaming-fællesskaber, programmere server-side scripts og udvikle tilknyttede websteder. Hans bidrag har været afgørende for at etablere og opretholde gaming-servere og sikre en glat og engagerende brugeroplevelse.',
+                projectsWebsite: 'Holms personlige hjemmeside, <a href="http://alexander-holm.com">alexander-holm.com</a>, viser hans arbejde og fungerer som en platform til at dele hans projekter og ideer. Denne hjemmeside fremhæver hans tekniske færdigheder og giver indsigt i hans professionelle rejse.',
+                interestsTitle: 'Personlige Interesser',
+                interestsList: [
+                    'Entreprenørskab',
+                    'Fiskeri',
+                    'Vin',
+                    'Klassisk Musik'
+                ],
+                interestsDescription: 'Ud over sine tekniske sysler har Alexander Holm en dyb kærlighed til naturen. Han nyder at vandre, udforske naturlandskaber og engagere sig i kreative designprojekter. Holm er engageret i personlig vækst og akademisk forbedring, samtidig med at han balancerer sine tekniske ambitioner med sin passion for den naturlige verden.'
+            }
+        };
+
+        function setLanguage(language) {
+            document.getElementById('header-title').innerText = translations[language].headerTitle;
+            document.getElementById('header-description').innerText = translations[language].headerDescription;
+            document.getElementById('about-title').innerText = translations[language].aboutTitle;
+            document.getElementById('about-content').innerText = translations[language].aboutContent;
+            document.getElementById('about-education').innerText = translations[language].aboutEducation;
+            document.getElementById('about-future').innerText = translations[language].aboutFuture;
+            document.getElementById('education-title').innerText = translations[language].educationTitle;
+            document.getElementById('education-content').innerText = translations[language].educationContent;
+            document.getElementById('projects-title').innerText = translations[language].projectsTitle;
+            document.getElementById('projects-content').innerHTML = translations[language].projectsContent;
+            document.getElementById('projects-website').innerHTML = translations[language].projectsWebsite;
+            document.getElementById('interests-title').innerText = translations[language].interestsTitle;
+            document.getElementById('interests-list').innerHTML = translations[language].interestsList.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('interests-description').innerText = translations[language].interestsDescription;
+        }
+
+        document.getElementById('language-selector').addEventListener('change', (event) => {
+            setLanguage(event.target.value);
+        });
+
+        // Initialize with English
+        setLanguage('en');
+    </script>
+</body>
+</html>
